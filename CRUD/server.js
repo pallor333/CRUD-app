@@ -5,7 +5,8 @@ const express = require('express')
 const app = express()
 //MongoDB code
 const MongoClient = require('mongodb').MongoClient
-let connectionString = "mongodb+srv://edwardmao2:q1sOWMXOsCZ0vXus@cluster0.fkc3g.mongodb.net/"
+require('dotenv').config(); //dotenv help loads .env file
+const connectionString = process.env.API_KEY; //"mongodb+srv://edwardmao2:q1sOWMXOsCZ0vXus@cluster0.fkc3g.mongodb.net/"
 //embedded javascript is the template engine required to generate HTML
 app.set('view engine', 'ejs') //must place before app.use/get/post
 
